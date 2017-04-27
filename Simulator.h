@@ -71,9 +71,10 @@ void Simulator::simulate()
         outputMatches(fout);
         auctioneer.printRecievedBidToFile(fout);
     
-    fout.close();
+        cout << "\nAuction outcome printed to "
+             << "AuctionOutcome.txt in working directory.\n" << endl;
     
-    //delete
+    fout.close();
 }
 
 
