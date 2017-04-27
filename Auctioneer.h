@@ -1,6 +1,6 @@
 //
 //  Auctioneer.h
-//  Assignment2
+//  Double_Auction_Simulation_System
 //
 //  Created by Mirna Wahab on 7/10/2016.
 //  Copyright © 2016 Mirna Wahab. All rights reserved.
@@ -32,14 +32,39 @@ public:
         sort(buyBids.begin(), buyBids.end());
         sort(askBids.begin(), askBids.end());
 
-        int i = 0;
-        while (askBids[i].getBidPrice() < buyBids[i].getBidPrice())
-        {
-            Match m(askBids[i],buyBids[i]);
-            matches.push_back(m);
+        int tempQuantity = 0;
+        bool flag = false;
 
-            askBids.erase((askBids.begin() + i));
-            buyBids.erase((buyBids.begin() + i));
+        while (askBids[0].getBidPrice() <= buyBids[0].getBidPrice() && flag == false)
+        {
+            Match m(askBids[0],buyBids[0]);
+            matches.push_back(m);
+            flag = true;
+
+            if ((askBids[0].getQuantity() < buyBids[0].getQuantity()))
+            {   
+                tempQuantity = buyBids[0].getQuantity() - askBids[0].getQuantity();
+                buyBids[0].setQuantity(tempQuantity); 
+                askBids.erase((askBids.begin()));
+                flag = false;
+            } 
+            else if ((askBids[0].getQuantity() > buyBids[0].getQuantity()))
+            {
+                tempQuantity = askBids[0].getQuantity() - buyBids[0].getQuantity();
+                askBids[0].setQuantity(tempQuantity); 
+                buyBids.erase((buyBids.begin()));
+                flag = false;
+
+            } 
+            else if ((askBids[0].getQuantity() == buyBids[0].getQuantity()))
+            {
+
+                tempQuantity = buyBids[0].getQuantity();
+                
+                askBids.erase((askBids.begin()));
+                buyBids.erase((buyBids.begin()));
+                flag = false;
+            }                
         }
         return matches;
     }
@@ -73,6 +98,7 @@ public:
         }
     }
     
+
     void printRecievedBidToFile(ofstream& fout)
     {
         static int printThis = 0;
