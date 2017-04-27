@@ -130,7 +130,6 @@ public:
             fout << endl;
         }
         printThis++;
-        cout << "\n" << endl;
     }
 };
 
