@@ -27,7 +27,7 @@ public:
         static int bidId = 0;
         
         price = (MAXPRICE - MINPRICE) * ( (double)rand() / (double)RAND_MAX ) + MINPRICE;
-        quantity = 1; //rand() % (MAXQUANTITY - MINQUANTITY) + MINQUANTITY;
+        quantity = rand() % (MAXQUANTITY - MINQUANTITY) + MINQUANTITY;
         
         Bid b(traderName, bidId++, traderType, price, quantity);
         return b;
