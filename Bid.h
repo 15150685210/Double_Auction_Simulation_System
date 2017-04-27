@@ -43,8 +43,12 @@ public:
         return false;
     }
     
+    void setQuantity(int q){ quantity = q; }
+    
     char getBidType() const {return bidType;}
+    
     double getBidPrice() const {return price;}
+    
     int getQuantity() const {return quantity;}
 };
 
