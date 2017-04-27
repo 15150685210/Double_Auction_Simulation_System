@@ -1,6 +1,6 @@
 //
 //  Seller.h
-//  Assignment2
+//  Double_Auction_Simulation_System
 //
 //  Created by Mirna Wahab on 7/10/2016.
 //  Copyright © 2016 Mirna Wahab. All rights reserved.
