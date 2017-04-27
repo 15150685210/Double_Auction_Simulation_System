@@ -21,6 +21,8 @@ using namespace std;
 
 const double MINPRICE = 50;
 const double MAXPRICE = 150;
+const int MINQUANTITY = 1;
+const int MAXQUANTITY = 50;
 const int NUMBUYERS = 10;
 const int NUMSELLERS = 10;
 
