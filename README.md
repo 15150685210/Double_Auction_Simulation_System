@@ -19,7 +19,8 @@ match these bids and determines a clearing price for each matched pair of bids.
 The aim of this program is to develop a simulation system that can mimic 
 a double auction market (for single product only).
 
-
+ 
+ 
 ### TEST PLAN
 
 To compile program in terminal: <br />
@@ -35,8 +36,8 @@ Auction outcome printed to AuctionOutcome.txt in working directory.
 Mirnas-MacBook-Pro:Double_Auction_Simulation_System MirnaWahab$ 
 
 
- <br />
-** AuctionOutcome.txt content **
+
+**AuctionOutcome.txt content:**
 
 Generated bids:
 
@@ -89,6 +90,7 @@ Unmatched Buy bids:
 (Buyer1, 11, B,  $61.45, 30) <br />
 (Buyer2, 12, B,  $52.38, 43) <br />
 (Buyer3, 13, B,  $51.76, 7) <br />
+
 
 
 ### LIMITATIONS  
